@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정량 조사 & 설문 설계 마스터 클래스</title>
+    <title>정량 조사</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
@@ -96,9 +96,8 @@
             <ul id="nav-menu" class="space-y-1">
                 <li><button onclick="switchTab('module1')" id="nav-module1" class="w-full text-left px-6 py-3 tab-active transition-colors text-sm font-medium">1. 가설 수립</button></li>
                 <li><button onclick="switchTab('module2')" id="nav-module2" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">2. 데이터 분석</button></li>
-                <li><button onclick="switchTab('module3')" id="nav-module3" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">3. 설문 문항 설계</button></li>
-                <li><button onclick="switchTab('module4')" id="nav-module4" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">4. 구조화 & 배포</button></li>
-                <li><button onclick="switchTab('module5')" id="nav-module5" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">5. 인사이트 도출</button></li>
+                <li><button onclick="switchTab('module2-1')" id="nav-module2-1" class="w-full text-left pl-10 pr-6 py-2 tab-inactive transition-colors text-sm font-medium">2-1. 데이터 정량화</button></li>
+                <li><button onclick="switchTab('module3')" id="nav-module3" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">3. 데이터 통합</button></li>
             </ul>
         </div>
     </nav>
@@ -107,23 +106,23 @@
     <main class="flex-1 overflow-y-auto bg-gray-50 p-6 md:p-12 relative">
         <div class="max-w-5xl mx-auto">
 
-            <!-- Global Resource Banner (FigJam Link) -->
-            <div class="bg-white rounded-lg shadow-sm mb-8 border border-gray-300 p-5 flex flex-col sm:flex-row justify-between items-center">
-                <div class="mb-4 sm:mb-0">
-                    <h2 class="text-lg font-bold text-gray-900">수업 진행 피그잼</h2>
-                    <p class="text-sm text-gray-600 mt-1">본 이론 가이드와 함께 실습을 진행할 수 있는 보드입니다.</p>
-                </div>
-                <a href="https://www.figma.com/board/BCidqgHKOlFJ1NgXS8PMSH/%EC%A0%95%EB%9F%89%EC%A1%B0%EC%82%AC-%EC%8B%A4%EC%8A%B5?node-id=0-1&t=CxyPd6z7ezZgtv0q-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-2.5 px-6 rounded transition-colors text-sm whitespace-nowrap shadow-sm">
-                    피그잼 이동
-                </a>
-            </div>
-
             <!-- Module 1: 가설 수립 -->
             <section id="module1" class="content-section">
                 <header class="mb-8 border-b border-gray-300 pb-4">
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 1: 가설 수립</h2>
                     <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"기획자의 착각을 깨는 첫걸음"</p>
                 </header>
+
+                <!-- Global Resource Banner (FigJam Link) - Moved inside Module 1 -->
+                <div class="bg-white rounded-lg shadow-sm mb-8 border border-gray-300 p-5 flex flex-col sm:flex-row justify-between items-center">
+                    <div class="mb-4 sm:mb-0">
+                        <h2 class="text-lg font-bold text-gray-900">수업 진행 피그잼</h2>
+                        <p class="text-sm text-gray-600 mt-1">본 이론 가이드와 함께 실습을 진행할 수 있는 보드입니다.</p>
+                    </div>
+                    <a href="https://www.figma.com/board/BCidqgHKOlFJ1NgXS8PMSH/%EC%A0%95%EB%9F%89%EC%A1%B0%EC%82%AC-%EC%8B%A4%EC%8A%B5?node-id=0-1&t=CxyPd6z7ezZgtv0q-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-2.5 px-6 rounded transition-colors text-sm whitespace-nowrap shadow-sm">
+                        피그잼 이동
+                    </a>
+                </div>
                 
                 <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border border-gray-300">
                     <p class="text-gray-800 leading-relaxed mb-4">
@@ -197,226 +196,249 @@
                 </div>
             </section>
 
-            <!-- Module 3: 설문 문항 설계 (기존 모듈 2) -->
-            <section id="module3" class="content-section hidden">
+            <!-- Module 2-1: 데이터 정량화 프로세스 -->
+            <section id="module2-1" class="content-section hidden">
                 <header class="mb-8 border-b border-gray-300 pb-4">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 3: 설문 문항 설계 (GIGO 방지)</h2>
-                    <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"Garbage In, Garbage Out! 확증 편향을 경계하라"</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 2-1: 데이터 정량화 프로세스</h2>
+                    <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"텍스트 데이터를 숫자로 변환하는 핵심 3단계"</p>
                 </header>
 
-                <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border border-gray-300">
-                    <p class="text-gray-800 leading-relaxed mb-4">
-                        이 섹션에서는 객관적인 데이터를 얻기 위해 피해야 할 '나쁜 질문'의 유형을 학습합니다. 쓰레기 데이터를 넣으면 쓰레기 결과가 나온다는 GIGO 법칙을 명심하며, 응답자의 편향을 유도하지 않는 올바른 질문 설계 방식을 아래 인터랙티브 비교를 통해 숙지해 보세요.
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-12 border border-gray-300">
+                    <p class="text-gray-800 leading-relaxed">
+                        모호한 정성 데이터를 통계와 비율로 확인하기 위해서는 체계적인 정량화 과정이 필수적입니다. 아래의 세부 프로세스를 따라 텍스트 데이터를 명확한 카테고리로 묶고 분류해 보세요.
                     </p>
                 </div>
 
-                <div class="space-y-6">
-                    <!-- Question Type 1 -->
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-300 p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">1. 유도성 질문 (Leading Questions)</h3>
-                        <p class="text-gray-600 mb-4">원하는 대답을 유도하여 데이터의 객관성을 훼손하는 질문입니다.</p>
-                        <div class="flex flex-col md:flex-row gap-4">
-                            <div class="flex-1 bg-red-50 p-5 rounded border border-red-200 relative">
-                                <span class="absolute top-3 right-3 text-sm font-bold text-red-600 bg-red-100 px-2 py-1 rounded">잘못된 예</span>
-                                <p class="text-gray-900 mt-4">"최근 화제가 되고 있는 당사의 <span class="text-red-600 font-bold underline">편리한</span> 기능을 사용해보시겠습니까?"</p>
-                            </div>
-                            <div class="flex-1 bg-blue-50 p-5 rounded border border-blue-200 relative">
-                                <span class="absolute top-3 right-3 text-sm font-bold text-blue-700 bg-blue-100 px-2 py-1 rounded">올바른 예</span>
-                                <p class="text-gray-900 mt-4">"귀하는 A 기능을 사용할 의향이 있으십니까?"<br><span class="text-blue-700 text-sm mt-2 block">(객관적 척도 제공)</span></p>
-                            </div>
+                <!-- Step-by-Step Flowchart (Image Inspired Layout, Max 2 per row) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12 mb-8">
+                    <!-- Step 1 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 pt-10 relative flex flex-col h-full transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-300">
+                        <div class="absolute -top-5 left-6 bg-blue-600 text-white font-bold px-6 py-2.5 rounded-full shadow-md text-sm tracking-wide">
+                            Step 1. 데이터 수집
+                        </div>
+                        <p class="text-gray-800 font-medium leading-relaxed break-keep mt-2 text-[15px] flex-grow">
+                            정성적 피드백(앱 리뷰, CS 문의 등)을 한곳에 취합하여 <span class="text-blue-700 font-bold">원본 데이터를 확보</span>합니다.
+                        </p>
+                        <div class="mt-5 text-left">
+                            <span class="inline-flex items-center text-blue-600 text-xs font-semibold">
+                                Notebook LM
+                            </span>
                         </div>
                     </div>
 
-                    <!-- Question Type 2 -->
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-300 p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">2. 이중 질문 (Double-barreled Questions)</h3>
-                        <p class="text-gray-600 mb-4">하나의 문항에 두 가지 이상의 질문을 포함하여 응답자를 혼란스럽게 하는 질문입니다.</p>
-                        <div class="flex flex-col md:flex-row gap-4">
-                            <div class="flex-1 bg-red-50 p-5 rounded border border-red-200 relative">
-                                <span class="absolute top-3 right-3 text-sm font-bold text-red-600 bg-red-100 px-2 py-1 rounded">잘못된 예</span>
-                                <p class="text-gray-900 mt-4">"저희 앱의 <span class="text-red-600 font-bold underline">디자인과 속도</span>에 만족하십니까?"<br><span class="text-red-700 text-sm mt-2 block">(디자인은 좋은데 속도는 느리다면?)</span></p>
-                            </div>
-                            <div class="flex-1 bg-blue-50 p-5 rounded border border-blue-200 relative">
-                                <span class="absolute top-3 right-3 text-sm font-bold text-blue-700 bg-blue-100 px-2 py-1 rounded">올바른 예</span>
-                                <p class="text-gray-900 mt-4">1. "저희 앱의 <span class="text-blue-700 font-bold">디자인</span>에 만족하십니까?"<br>2. "저희 앱의 <span class="text-blue-700 font-bold">속도</span>에 만족하십니까?"<br><span class="text-blue-700 text-sm mt-2 block">(문항 분리)</span></p>
-                            </div>
+                    <!-- Step 2 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 pt-10 relative flex flex-col h-full transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-300">
+                        <div class="absolute -top-5 left-6 bg-blue-600 text-white font-bold px-6 py-2.5 rounded-full shadow-md text-sm tracking-wide">
+                            Step 2. 카테고리 선정
+                        </div>
+                        <p class="text-gray-800 font-medium leading-relaxed break-keep mt-2 text-[15px] flex-grow">
+                            데이터를 훑어보며 핵심 키워드를 파악하고, <span class="text-blue-700 font-bold">상호배타적인 분류 기준</span>을 수립합니다.
+                        </p>
+                        <div class="mt-5 text-left">
+                            <span class="inline-flex items-center text-blue-600 text-xs font-semibold">
+                                Gemini / Notebook LM
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 pt-10 relative flex flex-col h-full transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-300">
+                        <div class="absolute -top-5 left-6 bg-blue-600 text-white font-bold px-6 py-2.5 rounded-full shadow-md text-sm tracking-wide">
+                            Step 3. 데이터 분류 (태깅)
+                        </div>
+                        <p class="text-gray-800 font-medium leading-relaxed break-keep mt-2 text-[15px] flex-grow">
+                            카테고리 기준에 맞춰 개별 텍스트를 매핑하고, <span class="text-blue-700 font-bold">복수 태깅 여부 기준</span>을 정합니다.
+                        </p>
+                        <div class="mt-5 text-left">
+                            <span class="inline-flex items-center text-blue-600 text-xs font-semibold">
+                                Gemini / ChatGPT
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 pt-10 relative flex flex-col h-full transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-300">
+                        <div class="absolute -top-5 left-6 bg-blue-600 text-white font-bold px-6 py-2.5 rounded-full shadow-md text-sm tracking-wide">
+                            Step 4. 감성(긍정/부정) 분류
+                        </div>
+                        <p class="text-gray-800 font-medium leading-relaxed break-keep mt-2 text-[15px] flex-grow">
+                            태깅된 데이터의 뉘앙스를 파악하여 <span class="text-blue-700 font-bold">긍정, 부정, 중립으로 교차 분류</span>합니다.
+                        </p>
+                        <div class="mt-5 text-left">
+                            <span class="inline-flex items-center text-blue-600 text-xs font-semibold">
+                                Gemini / ChatGPT
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 pt-10 relative flex flex-col h-full transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-300">
+                        <div class="absolute -top-5 left-6 bg-blue-600 text-white font-bold px-6 py-2.5 rounded-full shadow-md text-sm tracking-wide">
+                            Step 5. AI 비중 분석
+                        </div>
+                        <p class="text-gray-800 font-medium leading-relaxed break-keep mt-2 text-[15px] flex-grow">
+                            AI를 활용해 데이터를 수치화(%)하고, <span class="text-blue-700 font-bold">어떤 파트의 비율이 가장 높은지</span> 계산을 요청합니다.
+                        </p>
+                        <div class="mt-5 text-left">
+                            <span class="inline-flex items-center text-blue-600 text-xs font-semibold">
+                                Gemini / ChatGPT
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 pt-10 relative flex flex-col h-full transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-300">
+                        <div class="absolute -top-5 left-6 bg-blue-600 text-white font-bold px-6 py-2.5 rounded-full shadow-md text-sm tracking-wide">
+                            Step 6. 결과물 도출
+                        </div>
+                        <p class="text-gray-800 font-medium leading-relaxed break-keep mt-2 text-[15px] flex-grow">
+                            정량화된 수치(예: 부정 응답 45%)를 시각화하여, <span class="text-blue-700 font-bold">해결할 최우선 과제</span>로 정리해둡니다.
+                        </p>
+                        <div class="mt-5 text-left">
+                            <span class="inline-flex items-center text-blue-600 text-xs font-semibold">
+                                Gemini / ChatGPT
+                            </span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Module 4: 구조화 & 배포 (기존 모듈 3) -->
-            <section id="module4" class="content-section hidden">
+            <!-- Module 3: 데이터 통합 -->
+            <section id="module3" class="content-section hidden">
                 <header class="mb-8 border-b border-gray-300 pb-4">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 4: 설문 구조화 & 배포 스킬</h2>
-                    <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"응답자의 피로도를 낮추고 응답률을 극대화하라"</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 3: 데이터 통합</h2>
+                    <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"내용 분석 결과(정량)와 설문조사 결과(정성)를 하나로 연결하는 단계"</p>
                 </header>
 
                 <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border border-gray-300">
                     <p class="text-gray-800 leading-relaxed">
-                        훌륭한 질문도 구조가 엉망이거나 배포 방식이 매력적이지 않으면 응답을 받을 수 없습니다. 이 섹션에서는 설문의 흐름을 4단계로 구조화하는 프레임워크와, 구글 폼 세팅 및 실제 배포 시 클릭을 유도하는 '후킹(Hooking)' 전략을 확인합니다.
+                        이 단계는 앞서 도출한 두 가지 형태의 데이터(사용자의 구체적인 목소리와 이를 수치화한 정량 데이터)를 교차 분석하여 파편화된 정보를 강력한 하나의 인사이트로 결합하는 과정입니다. 
                     </p>
                 </div>
 
-                <h3 class="text-xl font-bold text-gray-900 mb-4">설문 구조화 프레임워크 (4단계)</h3>
-                <div class="overflow-x-auto mb-10 shadow-sm rounded border border-gray-300">
-                    <table class="min-w-full bg-white">
-                        <thead class="bg-gray-100 border-b border-gray-300">
-                            <tr>
-                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">단계</th>
-                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">명칭 (Focus)</th>
-                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">목적</th>
-                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">핵심 포인트</th>
+                <!-- 1단계: 통합 인사이트 도출 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 relative border-t-4 border-t-blue-600 mb-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-700 font-bold w-8 h-8 rounded flex items-center justify-center mr-3 text-sm">1</div>
+                        <h4 class="text-lg font-bold text-gray-900">통합 인사이트 (Integrated Insight) 도출</h4>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                        정성 데이터(사용자 목소리)와 정량 데이터(문제의 크기)를 교차 분석하여 <strong>'현상의 진짜 원인'</strong>을 규명합니다.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">✓</span>
+                            <span class="text-sm text-gray-600"><strong>이면 파악:</strong> 불만("어렵다")과 수치("이탈률 68%")를 결합해 '높은 인지적 부하'라는 근본 원인 도출</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">✓</span>
+                            <span class="text-sm text-gray-600"><strong>객관적 기준:</strong> 주관을 배제하고 데이터로 검증된 사실만 하나의 문장으로 요약하여 기획/디자인 방향성 확립</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 통합 인사이트 도출 테이블 -->
+                <h3 class="text-xl font-bold text-gray-900 mb-4">통합 인사이트 도출 예시</h3>
+                <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200 mb-12">
+                    <table class="min-w-full w-full whitespace-nowrap md:whitespace-normal">
+                        <thead>
+                            <tr class="bg-white border-b border-gray-200">
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/6">카테고리</th>
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/3">설문조사 요약 (정성/통합)</th>
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/4">내용 분석 데이터 (정량/수치)</th>
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/4">통합 인사이트 (Key Insight)</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-200 text-sm text-gray-800">
+                        <tbody class="divide-y divide-gray-100">
+                            <!-- Row 1 -->
                             <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="py-4 px-6 font-bold text-blue-700">1단계</td>
-                                <td class="py-4 px-6 font-semibold">스크리닝 (Screening)</td>
-                                <td class="py-4 px-6">우리 타깃이 맞는지 판별</td>
-                                <td class="py-4 px-6 bg-gray-50 text-gray-900 font-medium border-l border-gray-200">조건 불일치 시 로직 분기를 통해 '설문 즉시 종료'</td>
+                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">정보 탐색</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">전문 용어가 많아 제공되는 정보를 이해하기 어렵다는 의견 다수</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">용어 난해 및 정보 파악 불가 관련 부정적 피드백 68%</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed font-semibold align-top">높은 인지적 부하(Cognitive Load)로 인해 탐색 포기 및 이탈 발생</td>
                             </tr>
+                            <!-- Row 2 -->
                             <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="py-4 px-6 font-bold text-blue-700">2단계</td>
-                                <td class="py-4 px-6 font-semibold">행동 패턴 (Behavior)</td>
-                                <td class="py-4 px-6">현재 어떻게 문제를 해결하는지 파악</td>
-                                <td class="py-4 px-6 border-l border-gray-200">빈도, 사용 시간대, 주로 쓰는 경쟁 서비스 파악</td>
+                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">태스크 수행 (예약/접수)</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">입력해야 할 화면이 많고 전체 절차가 길어 피로감을 느낌</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">최종 완료 화면 도달 전 이탈률 및 관련 불만 42%</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed font-semibold align-top">복잡하고 긴 유저 플로우(User Flow)가 목적 달성을 직접적으로 저해함</td>
                             </tr>
-                            <tr class="hover:bg-gray-50 transition-colors border-l-4 border-blue-500">
-                                <td class="py-4 px-6 font-bold text-blue-700">3단계</td>
-                                <td class="py-4 px-6 font-semibold">페인포인트 (Pain-point)</td>
-                                <td class="py-4 px-6 text-blue-800 font-medium">가설을 검증하는 핵심 질문</td>
-                                <td class="py-4 px-6 border-l border-gray-200"><strong>리커트 척도(1~5점)</strong>를 활용해 불편함의 강도를 측정</td>
-                            </tr>
+                            <!-- Row 3 -->
                             <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="py-4 px-6 font-bold text-blue-700">4단계</td>
-                                <td class="py-4 px-6 font-semibold">인구통계 (Demographics)</td>
-                                <td class="py-4 px-6">응답자의 배경 정보 수집</td>
-                                <td class="py-4 px-6 text-gray-600 border-l border-gray-200">(가장 지루하므로 맨 뒤에 배치) 나이, 성별, 직업 등</td>
+                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">고객 지원</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">자동화된 챗봇 응답이 실제 상황과 맞지 않아 답답함을 호소함</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">상담원 직접 연결 요구 및 챗봇 오작동 불만 데이터 55%</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed font-semibold align-top">예외 상황 발생 시 시스템 툴보다 즉각적인 인적 대응(Human Touch) 선호</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Checklist -->
-                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-300">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">구글 폼 세팅 체크리스트</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start cursor-pointer hover:bg-gray-50 p-3 rounded border border-transparent hover:border-gray-200 transition-all" onclick="toggleCheck(this)">
-                                <span class="text-2xl mr-3 text-gray-300 check-icon">&#x2610;</span>
-                                <div>
-                                    <p class="font-semibold text-gray-900">도입부 작성 (신뢰도 UP)</p>
-                                    <p class="text-sm text-gray-600 mt-1">인사말 + 목적 + 시간(예: "딱 3분!") + 익명성 + 리워드</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start cursor-pointer hover:bg-gray-50 p-3 rounded border border-transparent hover:border-gray-200 transition-all" onclick="toggleCheck(this)">
-                                <span class="text-2xl mr-3 text-gray-300 check-icon">&#x2610;</span>
-                                <div>
-                                    <p class="font-semibold text-gray-900">로직 분기</p>
-                                    <p class="text-sm text-gray-600 mt-1">타깃이 아닌 경우 '섹션 이동' 기능 활용하여 조기 종료</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start cursor-pointer hover:bg-gray-50 p-3 rounded border border-transparent hover:border-gray-200 transition-all" onclick="toggleCheck(this)">
-                                <span class="text-2xl mr-3 text-gray-300 check-icon">&#x2610;</span>
-                                <div>
-                                    <p class="font-semibold text-gray-900">척도의 일관성</p>
-                                    <p class="text-sm text-gray-600 mt-1">1점(불만족) ~ 5점(만족) 긍정/부정 방향성 폼 전체 통일</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start cursor-pointer hover:bg-gray-50 p-3 rounded border border-transparent hover:border-gray-200 transition-all" onclick="toggleCheck(this)">
-                                <span class="text-2xl mr-3 text-gray-300 check-icon">&#x2610;</span>
-                                <div>
-                                    <p class="font-semibold text-gray-900">진행률 표시줄</p>
-                                    <p class="text-sm text-gray-600 mt-1">응답자에게 '끝이 보인다'는 안도감 제공 (설정 ON)</p>
-                                </div>
-                            </li>
-                        </ul>
+                <!-- 2단계: 페르소나 연결점 도출 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 relative border-t-4 border-t-purple-600 mb-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 text-purple-700 font-bold w-8 h-8 rounded flex items-center justify-center mr-3 text-sm">2</div>
+                        <h4 class="text-lg font-bold text-gray-900">페르소나 연결점 (Persona Attribute) 도출</h4>
                     </div>
-
-                    <!-- Hooking -->
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-sm border border-gray-300 flex flex-col justify-center">
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">실전 배포: 후킹(Hooking) 메시지</h3>
-                        <p class="text-sm text-gray-700 mb-4">단순히 "설문 부탁드립니다"로는 클릭 유도를 할 수 없습니다. 타깃의 언어로 <strong>혜택과 공감대</strong>를 자극하세요.</p>
-                        <div class="bg-white p-5 rounded border-l-4 border-blue-700 shadow-sm relative">
-                            <p class="text-gray-900 text-sm font-medium mt-2 leading-relaxed">
-                                "매번 점심 메뉴 고르기 지치시는 직장인 분들! 딱 2분만 투자해서 여러분의 목소리를 들려주세요. 추첨을 통해 스타벅스 기프티콘을 쏩니다! [링크]"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Module 5: 결합 & 포트폴리오 -->
-            <section id="module5" class="content-section hidden">
-                <header class="mb-8 border-b border-gray-300 pb-4">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 5: 정량과 정성의 결합</h2>
-                    <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"현상(객관식)과 원인(주관식)을 결합하여 Action Item 도출하기"</p>
-                </header>
-
-                <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border border-gray-300">
-                    <p class="text-gray-800 leading-relaxed mb-4">
-                        데이터 분석의 궁극적인 목적은 "그래서 무엇을 해야 하는가?"에 답하는 것입니다. <strong>현상을 보여주는 정량적 객관식 데이터</strong>와 <strong>원인을 알려주는 정성적 주관식 데이터</strong>를 결합하여 입체적인 인사이트를 도출하고, 이를 바탕으로 실행 가능한 결론(Next Step)을 내리는 과정을 시각적으로 확인합니다. 이 구조는 포트폴리오나 공공 보고서 작성 시에도 매우 효과적입니다.
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                        도출된 인사이트를 바탕으로, 데이터를 <strong>'특정 성향을 가진 사람의 특징'</strong>으로 치환합니다.
                     </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">✓</span>
+                            <span class="text-sm text-gray-600"><strong>Fact-based 구축:</strong> 기획자의 상상이나 편견 없이 오직 조사 결과의 사실에 근거하여 성향, 태도, 목표 정의</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">✓</span>
+                            <span class="text-sm text-gray-600"><strong>행동 스펙트럼 축:</strong> 인사이트를 개인의 특성으로 변환하여, 추후 사용자 그룹을 분류할 양극단 축(Axis)의 재료로 활용</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Dashboard Layout for Integration (KRDS Report Style) -->
-                <div class="bg-white p-8 rounded-lg shadow-sm mb-8 border border-gray-300">
-                    <div class="mb-8 border-b border-gray-200 pb-5 bg-gray-50 p-4 rounded border">
-                        <span class="bg-blue-100 text-blue-800 border border-blue-200 text-xs font-bold px-3 py-1 rounded uppercase tracking-wide">1. 가설</span>
-                        <p class="mt-3 text-lg font-medium text-gray-900">"결제 단계의 사용자 경험을 개선하면 결제 이탈률을 낮출 수 있을 것이다."</p>
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-6 flex items-center text-gray-900">
-                        <span class="bg-blue-100 text-blue-800 border border-blue-200 text-xs font-bold px-3 py-1 rounded uppercase tracking-wide mr-3">2. 데이터 결합</span>
-                    </h3>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        <!-- Quant Chart -->
-                        <div class="bg-white p-5 rounded border border-gray-200 shadow-sm">
-                            <h4 class="text-sm font-bold text-gray-800 mb-1 text-center bg-gray-100 py-2 rounded">A. 현상 파악 (객관식 결과)</h4>
-                            <p class="text-sm text-gray-600 text-center mb-4 mt-2">"앱의 '결제 과정' 만족도"</p>
-                            <div class="chart-container" style="height: 200px; max-height: 250px;">
-                                <canvas id="quantChart"></canvas>
-                            </div>
-                            <div class="mt-4 p-2 bg-red-50 border border-red-100 rounded">
-                                <p class="text-xs text-center text-red-700 font-medium">한계: 불만족이 높다는 것은 알지만 무엇을 고쳐야 할지 모름</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Qual Chart -->
-                        <div class="bg-white p-5 rounded border border-gray-200 shadow-sm">
-                            <h4 class="text-sm font-bold text-gray-800 mb-1 text-center bg-gray-100 py-2 rounded">B. 원인 파악 (주관식 내용 분석)</h4>
-                            <p class="text-sm text-gray-600 text-center mb-4 mt-2">"결제 불만족 관련 주관식 응답(200건)"</p>
-                            <div class="chart-container" style="height: 200px; max-height: 250px;">
-                                <canvas id="qualChart"></canvas>
-                            </div>
-                            <div class="mt-4 p-2 bg-yellow-50 border border-yellow-100 rounded">
-                                <p class="text-xs text-center text-yellow-800 font-medium">한계: 구체적 불만은 알지만 전체를 대변하는지(우선순위) 모름</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Synthesis Action -->
-                    <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg relative overflow-hidden">
-                        <span class="bg-blue-700 text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wide shadow-sm">3. 최종 인사이트 & Next 기획</span>
-                        <p class="mt-4 text-lg font-bold leading-relaxed text-gray-900">
-                            "앱의 가장 큰 페인포인트는 <span class="text-blue-700 underline decoration-blue-300 decoration-4 underline-offset-4">결제 과정(75% 불만족)</span>이며, 핵심 원인은 <span class="text-blue-700 underline decoration-blue-300 decoration-4 underline-offset-4">카드 등록 오류(주관식 60%)</span>에 있다."
-                        </p>
-                        <div class="mt-5 bg-white p-4 rounded border border-gray-200 shadow-sm">
-                            <p class="text-sm text-gray-800"><strong>실행 목표:</strong> 개발팀은 최우선적으로 '카드 등록 프로세스 API' 오류를 수정하고, 디자인팀은 '할부 기간 선택 UI'를 개편한다.</p>
-                        </div>
-                    </div>
+                <!-- 페르소나 연결점 도출 테이블 -->
+                <h3 class="text-xl font-bold text-gray-900 mb-4">페르소나 연결점 도출 예시</h3>
+                <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
+                    <table class="min-w-full w-full whitespace-nowrap md:whitespace-normal">
+                        <thead>
+                            <tr class="bg-white border-b border-gray-200">
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/6">주요 문제 영역 (Pain Points)</th>
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/4">페르소나 연결점 (1단계 도출)</th>
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/3">사용자 행동 및 태도 예측</th>
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/4">페르소나 행동 축 (Behavioral Axis)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <!-- Row 1 -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">정보 인지 부하</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">직관적 어휘 선호, 요약 정보 요구</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">상세한 텍스트 설명을 읽기보다 핵심 위주로 화면을 스캐닝(Scanning)함</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">
+                                    상세 정보 탐독형 <span class="text-gray-300 mx-1"><----></span> <strong class="font-bold text-gray-900">핵심 요약 스캐닝형</strong>
+                                </td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">플로우 복잡성</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">단계별 진행 선호, 오류 불안감</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">한 화면에 여러 선택지가 주어지면 마비되며, 단일 태스크 집중 시 전환율 상승</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">
+                                    다중 경로 자율 탐색형 <span class="text-gray-300 mx-1"><----></span> <strong class="font-bold text-gray-900">단일 경로 유도형 (Guided)</strong>
+                                </td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">시스템 신뢰도</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">시스템 불신, 인적 해결책 선호</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">서비스 이용 중 막히는 구간에서 스스로 해결책을 찾기보다 즉시 고객센터 아이콘을 찾음</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">
+                                    시스템 기반 자가 해결형 <span class="text-gray-300 mx-1"><----></span> <strong class="font-bold text-gray-900">인적 자원 의존형</strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-
-                <!-- Portfolio Tip -->
-                <div class="bg-gray-100 border border-gray-300 p-6 rounded-lg flex items-start shadow-sm">
-                    <div>
-                        <h4 class="font-bold text-gray-900">보고서/포트폴리오 작성 팁</h4>
-                        <p class="text-sm text-gray-700 mt-2 leading-relaxed">의사결정권자는 긴 설문지를 읽을 시간이 없습니다. 구글 폼 캡처본을 나열하지 말고, <strong>위의 [가설 -> 데이터 결합(A+B 차트) -> 최종 인사이트] 구조를 1장짜리 장표로 압축</strong>하여 문제 해결 능력과 논리력을 명확히 전달하세요.</p>
-                    </div>
-                </div>
-
             </section>
 
         </div>
@@ -424,10 +446,6 @@
 
     <!-- Interactive Logic & Chart Initialization -->
     <script>
-        // Global variables for charts
-        let quantChartInstance = null;
-        let qualChartInstance = null;
-
         // --- Navigation Logic ---
         function switchTab(targetId) {
             // Hide all sections
@@ -452,12 +470,6 @@
             // Set active nav styling
             document.getElementById('nav-' + targetId).classList.remove('tab-inactive');
             document.getElementById('nav-' + targetId).classList.add('tab-active');
-
-            // Render/Resize charts when tab becomes visible
-            if(targetId === 'module5') {
-                if(!quantChartInstance) initIntegrationCharts();
-                else { quantChartInstance.resize(); qualChartInstance.resize(); }
-            }
         }
 
         // --- Module 1 Interactive Cards ---
@@ -477,97 +489,6 @@
                 cardHeader.innerHTML = 'Good 예시 (데이터로 검증 가능!)';
                 cardHeader.className = 'bg-blue-600 border-b border-blue-700 text-white p-3 font-bold text-center transition-colors';
             }
-        }
-
-        // --- Module 4 Checklist ---
-        function toggleCheck(element) {
-            const icon = element.querySelector('.check-icon');
-            if (icon.innerHTML === '☐') {
-                icon.innerHTML = '☑';
-                icon.classList.remove('text-gray-300');
-                icon.classList.add('text-blue-600');
-                element.classList.add('bg-blue-50', 'border-blue-200');
-                element.classList.remove('border-transparent', 'hover:border-gray-200');
-            } else {
-                icon.innerHTML = '☐';
-                icon.classList.remove('text-blue-600');
-                icon.classList.add('text-gray-300');
-                element.classList.remove('bg-blue-50', 'border-blue-200');
-                element.classList.add('border-transparent', 'hover:border-gray-200');
-            }
-        }
-
-        // --- Module 5 Integration Charts ---
-        function initIntegrationCharts() {
-            // A. Quant Chart (Bar) - Standard Alert/Info Colors
-            const quantCtx = document.getElementById('quantChart').getContext('2d');
-            quantChartInstance = new Chart(quantCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['불만족', '보통', '만족'],
-                    datasets: [{
-                        label: '응답 비율(%)',
-                        data: [75, 15, 10],
-                        backgroundColor: ['#DC2626', '#9CA3AF', '#059669'], // red-600, gray-400, green-600
-                        borderRadius: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) { return context.parsed.y + '%'; }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: { 
-                            beginAtZero: true, 
-                            max: 100, 
-                            ticks: { color: '#4B5563' },
-                            grid: { color: '#E5E7EB' }
-                        },
-                        x: { 
-                            ticks: { color: '#4B5563' },
-                            grid: { display: false }
-                        }
-                    }
-                }
-            });
-
-            // B. Qual Chart (Doughnut) - Professional Corporate Colors
-            const qualCtx = document.getElementById('qualChart').getContext('2d');
-            qualChartInstance = new Chart(qualCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['카드 등록 시 잦은 오류', '할부 기간 UI 불편', '기타 로딩 문제'],
-                    datasets: [{
-                        data: [60, 30, 10],
-                        backgroundColor: ['#2563EB', '#60A5FA', '#CBD5E1'], // blue-600, blue-400, slate-300
-                        borderWidth: 1,
-                        borderColor: '#FFFFFF'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { 
-                            position: 'right',
-                            labels: { color: '#374151', font: { size: 11 } }
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) { return ' ' + context.parsed + '%'; }
-                            }
-                        }
-                    },
-                    cutout: '50%'
-                }
-            });
         }
 
         // Initialize on load
