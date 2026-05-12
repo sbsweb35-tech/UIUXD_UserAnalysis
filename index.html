@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정량 조사</title>
+    <title>정량 조사 이해하기</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
@@ -89,16 +89,37 @@
     <!-- Sidebar Navigation -->
     <nav class="w-full md:w-64 bg-white border-r border-gray-200 shadow-sm z-10 flex-shrink-0 flex flex-col">
         <div class="p-6 border-b border-gray-200 bg-gray-50">
-            <h1 class="text-xl font-bold text-gray-900 tracking-tight">정량 조사 이해하기</h1>
+            <h1 class="text-xl font-bold text-gray-900 tracking-tight">설문 설계 마스터</h1>
             <p class="text-xs text-gray-600 mt-1">데이터 기반 의사결정 실무 가이드</p>
         </div>
-        <div class="flex-1 overflow-y-auto py-4">
+
+        <!-- 피그잼 이동 버튼 및 구분선 -->
+        <div class="px-6 pt-6">
+            <a href="https://www.figma.com/board/BCidqgHKOlFJ1NgXS8PMSH/%EC%A0%95%EB%9F%89%EC%A1%B0%EC%82%AC-%EC%8B%A4%EC%8A%B5?node-id=0-1&t=CxyPd6z7ezZgtv0q-1" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-2.5 px-6 rounded transition-colors text-sm whitespace-nowrap shadow-sm">
+                피그잼 이동
+            </a>
+        </div>
+        <div class="px-6 py-4">
+            <div class="w-full border-t-2 border-blue-200 opacity-60"></div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto pb-4">
             <ul id="nav-menu" class="space-y-1">
                 <li><button onclick="switchTab('module1')" id="nav-module1" class="w-full text-left px-6 py-3 tab-active transition-colors text-sm font-medium">1. 가설 수립</button></li>
                 <li><button onclick="switchTab('module2')" id="nav-module2" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">2. 데이터 분석</button></li>
                 <li><button onclick="switchTab('module2-1')" id="nav-module2-1" class="w-full text-left pl-10 pr-6 py-2 tab-inactive transition-colors text-sm font-medium">2-1. 데이터 정량화</button></li>
                 <li><button onclick="switchTab('module3')" id="nav-module3" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">3. 데이터 통합</button></li>
             </ul>
+        </div>
+        
+        <!-- 메모 버튼 추가 -->
+        <div class="p-4 border-t border-gray-200 bg-gray-50">
+            <button onclick="openMemoModal()" class="w-full flex items-center justify-center space-x-2 bg-white border border-gray-300 hover:bg-gray-100 hover:border-gray-400 text-gray-700 py-2.5 rounded-lg transition-all font-semibold text-sm shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+                <span>메모 확인</span>
+            </button>
         </div>
     </nav>
 
@@ -112,17 +133,6 @@
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 1: 가설 수립</h2>
                     <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"기획자의 착각을 깨는 첫걸음"</p>
                 </header>
-
-                <!-- Global Resource Banner (FigJam Link) - Moved inside Module 1 -->
-                <div class="bg-white rounded-lg shadow-sm mb-8 border border-gray-300 p-5 flex flex-col sm:flex-row justify-between items-center">
-                    <div class="mb-4 sm:mb-0">
-                        <h2 class="text-lg font-bold text-gray-900">수업 진행 피그잼</h2>
-                        <p class="text-sm text-gray-600 mt-1">본 이론 가이드와 함께 실습을 진행할 수 있는 보드입니다.</p>
-                    </div>
-                    <a href="https://www.figma.com/board/BCidqgHKOlFJ1NgXS8PMSH/%EC%A0%95%EB%9F%89%EC%A1%B0%EC%82%AC-%EC%8B%A4%EC%8A%B5?node-id=0-1&t=CxyPd6z7ezZgtv0q-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-2.5 px-6 rounded transition-colors text-sm whitespace-nowrap shadow-sm">
-                        피그잼 이동
-                    </a>
-                </div>
                 
                 <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border border-gray-300">
                     <p class="text-gray-800 leading-relaxed mb-4">
@@ -138,7 +148,7 @@
                 </div>
 
                 <h3 class="text-xl font-bold text-gray-900 mb-4">가설 판독기: 아래 카드를 클릭하여 좋은 가설로 변환해보세요</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 gap-6">
                     <!-- Interactive Card -->
                     <div class="bg-white rounded-lg shadow-sm border border-gray-300 overflow-hidden cursor-pointer transform transition hover:-translate-y-1" onclick="toggleCard('hypo1')">
                         <div class="bg-gray-100 border-b border-gray-300 text-red-700 p-3 font-bold text-center">Bad 예시 (클릭하여 변환)</div>
@@ -414,8 +424,20 @@
                                 <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">정보 인지 부하</td>
                                 <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">직관적 어휘 선호, 요약 정보 요구</td>
                                 <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">상세한 텍스트 설명을 읽기보다 핵심 위주로 화면을 스캐닝(Scanning)함</td>
-                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">
-                                    상세 정보 탐독형 <span class="text-gray-300 mx-1"><----></span> <strong class="font-bold text-gray-900">핵심 요약 스캐닝형</strong>
+                                <td class="py-5 px-6 align-top">
+                                    <svg class="w-full max-w-[280px]" height="50" viewBox="0 0 320 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Axis Line -->
+                                        <line x1="10" y1="15" x2="310" y2="15" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
+                                        <line x1="160" y1="15" x2="310" y2="15" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
+                                        
+                                        <!-- Nodes -->
+                                        <circle cx="10" cy="15" r="5" fill="#9CA3AF"/>
+                                        <circle cx="310" cy="15" r="7" fill="#1D4ED8"/>
+                                        
+                                        <!-- Labels -->
+                                        <text x="10" y="38" fill="#6B7280" font-size="13" font-family="'Pretendard', sans-serif">상세 정보 탐독형</text>
+                                        <text x="310" y="38" fill="#111827" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif" text-anchor="end">핵심 요약 스캐닝형</text>
+                                    </svg>
                                 </td>
                             </tr>
                             <!-- Row 2 -->
@@ -423,8 +445,15 @@
                                 <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">플로우 복잡성</td>
                                 <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">단계별 진행 선호, 오류 불안감</td>
                                 <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">한 화면에 여러 선택지가 주어지면 마비되며, 단일 태스크 집중 시 전환율 상승</td>
-                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">
-                                    다중 경로 자율 탐색형 <span class="text-gray-300 mx-1"><----></span> <strong class="font-bold text-gray-900">단일 경로 유도형 (Guided)</strong>
+                                <td class="py-5 px-6 align-top">
+                                    <svg class="w-full max-w-[280px]" height="50" viewBox="0 0 320 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="10" y1="15" x2="310" y2="15" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
+                                        <line x1="160" y1="15" x2="310" y2="15" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
+                                        <circle cx="10" cy="15" r="5" fill="#9CA3AF"/>
+                                        <circle cx="310" cy="15" r="7" fill="#1D4ED8"/>
+                                        <text x="10" y="38" fill="#6B7280" font-size="13" font-family="'Pretendard', sans-serif">다중 경로 자율 탐색형</text>
+                                        <text x="310" y="38" fill="#111827" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif" text-anchor="end">단일 경로 유도형 (Guided)</text>
+                                    </svg>
                                 </td>
                             </tr>
                             <!-- Row 3 -->
@@ -432,8 +461,15 @@
                                 <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">시스템 신뢰도</td>
                                 <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">시스템 불신, 인적 해결책 선호</td>
                                 <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">서비스 이용 중 막히는 구간에서 스스로 해결책을 찾기보다 즉시 고객센터 아이콘을 찾음</td>
-                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">
-                                    시스템 기반 자가 해결형 <span class="text-gray-300 mx-1"><----></span> <strong class="font-bold text-gray-900">인적 자원 의존형</strong>
+                                <td class="py-5 px-6 align-top">
+                                    <svg class="w-full max-w-[280px]" height="50" viewBox="0 0 320 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="10" y1="15" x2="310" y2="15" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
+                                        <line x1="160" y1="15" x2="310" y2="15" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
+                                        <circle cx="10" cy="15" r="5" fill="#9CA3AF"/>
+                                        <circle cx="310" cy="15" r="7" fill="#1D4ED8"/>
+                                        <text x="10" y="38" fill="#6B7280" font-size="13" font-family="'Pretendard', sans-serif">시스템 기반 자가 해결형</text>
+                                        <text x="310" y="38" fill="#111827" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif" text-anchor="end">인적 자원 의존형</text>
+                                    </svg>
                                 </td>
                             </tr>
                         </tbody>
@@ -444,8 +480,287 @@
         </div>
     </main>
 
+    <!-- 메모 모달 (팝업) -->
+    <div id="memo-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden flex-col items-center justify-center backdrop-blur-sm transition-opacity opacity-0 p-4 md:p-6">
+        <div class="bg-white rounded-2xl shadow-2xl w-[95vw] max-w-[1800px] h-[95vh] max-h-[95vh] flex flex-col transform transition-transform scale-95" id="memo-modal-content">
+            <!-- Header -->
+            <div class="px-6 py-5 border-b border-gray-200 flex justify-between items-center bg-gray-50 rounded-t-2xl">
+                <h3 class="text-xl font-bold text-gray-900 flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    클래스 핵심 메모
+                </h3>
+                <button onclick="closeMemoModal()" class="text-gray-400 hover:text-gray-900 transition-colors bg-white hover:bg-gray-200 rounded-full p-1">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Body -->
+            <div id="memo-body" class="p-6 md:p-8 overflow-y-auto flex-1 bg-white">
+                <!-- 동적으로 내용이 렌더링 됩니다. -->
+            </div>
+
+            <!-- Footer -->
+            <div id="memo-footer" class="px-6 py-4 border-t border-gray-200 bg-gray-50 flex justify-end rounded-b-2xl">
+                <button onclick="showPasswordPrompt()" class="text-sm font-semibold text-gray-500 hover:text-blue-700 transition-colors flex items-center bg-white border border-gray-300 px-4 py-2 rounded-lg hover:border-blue-400 hover:bg-blue-50 shadow-sm">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    메모 확인
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Interactive Logic & Chart Initialization -->
     <script>
+        // 현재 시간을 한국 기준(KST)으로 포맷팅하는 함수
+        function getKSTDateString() {
+            const now = new Date();
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+            const kstTime = new Date(utc + (9 * 3600000));
+            return kstTime.getFullYear() + '.' + 
+                   String(kstTime.getMonth() + 1).padStart(2, '0') + '.' + 
+                   String(kstTime.getDate()).padStart(2, '0') + ' ' + 
+                   String(kstTime.getHours()).padStart(2, '0') + ':' + 
+                   String(kstTime.getMinutes()).padStart(2, '0');
+        }
+
+        // --- Memo Logic ---
+        let memos = JSON.parse(localStorage.getItem('class_memos')) || [
+            { id: 1, title: '정량/정성 조사의 차이점', content: '정량 조사는 How many(수치 파악), 정성 조사는 Why(원인 파악)에 집중합니다.\n데이터를 상호 보완적으로 활용하는 것이 핵심입니다.', date: getKSTDateString() }
+        ];
+
+        // 개발자 모드에서 비밀번호를 숨기기 위한 단방향 해시 함수
+        function hashPassword(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            return hash;
+        }
+
+        function escapeHtml(unsafe) {
+            return unsafe.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+
+        const modal = document.getElementById('memo-modal');
+        const modalContent = document.getElementById('memo-modal-content');
+        const memoBody = document.getElementById('memo-body');
+        const memoFooter = document.getElementById('memo-footer');
+
+        function openMemoModal() {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+            renderMemoList();
+        }
+
+        function closeMemoModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // 메모 목록 렌더링 (리스트 방식)
+        function renderMemoList() {
+            memoFooter.classList.remove('hidden');
+            
+            if (memos.length === 0) {
+                memoBody.innerHTML = `<div class="text-center py-20 text-gray-500 text-lg font-medium">등록된 메모가 없습니다.</div>`;
+                return;
+            }
+
+            // 최신 메모가 위로 오도록 정렬
+            const sortedMemos = [...memos].sort((a, b) => b.id - a.id);
+
+            let html = '<div class="space-y-3">';
+            sortedMemos.forEach(memo => {
+                html += `
+                <div class="relative w-full group">
+                    <button onclick="viewMemo(${memo.id})" class="w-full text-left bg-white border border-gray-200 rounded-xl p-5 hover:bg-gray-50 hover:border-blue-400 transition-all duration-300 focus:outline-none flex flex-col md:flex-row md:justify-between md:items-center">
+                        <h4 class="font-bold text-[18px] text-gray-900 group-hover:text-blue-700 transition-colors truncate mb-2 md:mb-0 md:mr-4 flex-1">${escapeHtml(memo.title)}</h4>
+                        <span class="text-sm font-medium text-gray-500 whitespace-nowrap md:pr-20">${memo.date || ''}</span>
+                    </button>
+                    <!-- 호버 시 나타나는 수정 버튼 -->
+                    <button onclick="event.stopPropagation(); promptEditMemo(${memo.id})" class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 text-sm text-blue-600 font-bold hover:text-blue-800 transition-opacity bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg border border-blue-200 z-10 flex items-center shadow-sm">
+                        <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                        수정
+                    </button>
+                </div>`;
+            });
+            html += '</div>';
+            memoBody.innerHTML = html;
+        }
+
+        // 메모 상세 보기 화면 (클릭 시 화면 전환)
+        function viewMemo(id) {
+            memoFooter.classList.add('hidden');
+            const memo = memos.find(m => m.id === id);
+            if(!memo) return;
+
+            memoBody.innerHTML = `
+                <div class="h-full flex flex-col max-w-5xl mx-auto w-full">
+                    <div class="flex justify-between items-center mb-6">
+                        <button onclick="renderMemoList()" class="flex items-center text-gray-500 hover:text-blue-700 transition-colors font-bold bg-gray-100 hover:bg-blue-50 px-4 py-2 rounded-lg">
+                            <svg class="w-5 h-5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            목록으로 돌아가기
+                        </button>
+                        <button onclick="promptEditMemo(${memo.id})" class="flex items-center text-blue-600 hover:text-blue-800 transition-colors font-bold bg-blue-50 hover:bg-blue-100 border border-blue-200 px-4 py-2 rounded-lg shadow-sm">
+                            <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                            수정
+                        </button>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-8 md:p-12 flex-grow overflow-y-auto border border-gray-200 shadow-sm">
+                        <h2 class="text-[28px] font-bold text-gray-900 mb-4 tracking-tight">${escapeHtml(memo.title)}</h2>
+                        <div class="text-sm font-medium text-gray-500 mb-8 pb-6 border-b border-gray-300">${memo.date || ''}</div>
+                        <div class="text-gray-800 text-[16px] leading-loose whitespace-pre-wrap">${escapeHtml(memo.content)}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function promptEditMemo(id) {
+            showPasswordPrompt(id);
+        }
+
+        function showPasswordPrompt(editMemoId = null) {
+            memoFooter.classList.add('hidden');
+            const actionArg = editMemoId ? editMemoId : 'null';
+            const cancelAction = editMemoId ? `viewMemo(${editMemoId})` : 'renderMemoList()';
+            
+            memoBody.innerHTML = `
+                <div class="h-full flex items-center justify-center">
+                    <div class="text-center p-10 max-w-sm w-full bg-gray-50 border border-gray-200 rounded-2xl shadow-sm">
+                        <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 text-blue-600 mb-5 shadow-inner">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">관리자 권한 확인</h4>
+                        <p class="text-sm text-gray-500 mb-8">메모를 ${editMemoId ? '수정' : '등록'}하려면 강사 비밀번호를 입력해주세요.</p>
+                        <input type="password" id="memo-password" class="w-full px-5 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all mb-4 text-center font-bold tracking-widest shadow-sm" placeholder="비밀번호 입력" onkeyup="if(event.key === 'Enter') verifyPassword(${actionArg})">
+                        <p id="password-error" class="text-xs text-red-600 hidden mb-6 font-bold">비밀번호가 일치하지 않습니다.</p>
+                        <div class="flex space-x-3">
+                            <button onclick="${cancelAction}" class="flex-1 px-4 py-3 bg-white border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-100 font-bold text-sm transition-colors shadow-sm">취소</button>
+                            <button onclick="verifyPassword(${actionArg})" class="flex-1 px-4 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-bold text-sm transition-colors shadow-sm">확인</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            setTimeout(() => document.getElementById('memo-password').focus(), 50);
+        }
+
+        function verifyPassword(editMemoId = null) {
+            const input = document.getElementById('memo-password').value;
+            // "0525!"의 해시값(45957657)을 비교. 소스코드에 원본 비밀번호가 드러나지 않음.
+            if (hashPassword(input) === 45957657) {
+                if(editMemoId) {
+                    showEditMemoForm(editMemoId);
+                } else {
+                    showMemoForm();
+                }
+            } else {
+                const errorEl = document.getElementById('password-error');
+                errorEl.classList.remove('hidden');
+                document.getElementById('memo-password').value = '';
+                document.getElementById('memo-password').focus();
+            }
+        }
+        
+        function showEditMemoForm(id) {
+            const memo = memos.find(m => m.id === id);
+            if(!memo) return;
+
+            memoFooter.classList.add('hidden');
+            memoBody.innerHTML = `
+                <div class="h-full flex flex-col max-w-4xl mx-auto w-full">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">메모 수정</h3>
+                    <div class="space-y-6 flex-grow flex flex-col bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">메모 제목</label>
+                            <input type="text" id="memo-title" value="${escapeHtml(memo.title)}" class="w-full px-5 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-base transition-shadow shadow-sm" placeholder="제목을 입력하세요">
+                        </div>
+                        <div class="flex-grow flex flex-col">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">메모 내용</label>
+                            <textarea id="memo-content" class="w-full flex-grow px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-base resize-none transition-shadow shadow-sm leading-relaxed" placeholder="자세한 메모 내용을 입력하세요">${escapeHtml(memo.content)}</textarea>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3 pt-6 mt-4">
+                        <button onclick="viewMemo(${id})" class="flex-1 px-6 py-4 bg-white border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-100 font-bold text-lg transition-colors shadow-sm">취소</button>
+                        <button onclick="updateMemo(${id})" class="flex-1 px-6 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-bold text-lg transition-colors shadow-sm">수정 완료</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function updateMemo(id) {
+            const title = document.getElementById('memo-title').value.trim();
+            const content = document.getElementById('memo-content').value.trim();
+
+            if (!title || !content) {
+                alert('제목과 내용을 모두 입력해주세요.');
+                return;
+            }
+
+            const memoIndex = memos.findIndex(m => m.id === id);
+            if(memoIndex > -1) {
+                memos[memoIndex].title = title;
+                memos[memoIndex].content = content;
+                // 수정 시각 업데이트
+                memos[memoIndex].date = getKSTDateString() + ' (수정됨)';
+                localStorage.setItem('class_memos', JSON.stringify(memos));
+                viewMemo(id);
+            }
+        }
+
+        function showMemoForm() {
+            memoFooter.classList.add('hidden');
+            memoBody.innerHTML = `
+                <div class="h-full flex flex-col max-w-4xl mx-auto w-full">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">새 메모 작성</h3>
+                    <div class="space-y-6 flex-grow flex flex-col bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">메모 제목</label>
+                            <input type="text" id="memo-title" class="w-full px-5 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-base transition-shadow shadow-sm" placeholder="제목을 입력하세요">
+                        </div>
+                        <div class="flex-grow flex flex-col">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">메모 내용</label>
+                            <textarea id="memo-content" class="w-full flex-grow px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-base resize-none transition-shadow shadow-sm leading-relaxed" placeholder="자세한 메모 내용을 입력하세요"></textarea>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3 pt-6 mt-4">
+                        <button onclick="renderMemoList()" class="flex-1 px-6 py-4 bg-white border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-100 font-bold text-lg transition-colors shadow-sm">취소</button>
+                        <button onclick="saveMemo()" class="flex-1 px-6 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-bold text-lg transition-colors shadow-sm">저장하기</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function saveMemo() {
+            const title = document.getElementById('memo-title').value.trim();
+            const content = document.getElementById('memo-content').value.trim();
+
+            if (!title || !content) {
+                alert('제목과 내용을 모두 입력해주세요.');
+                return;
+            }
+
+            const newMemo = {
+                id: Date.now(),
+                title: title,
+                content: content,
+                date: getKSTDateString()
+            };
+
+            memos.push(newMemo);
+            localStorage.setItem('class_memos', JSON.stringify(memos));
+            renderMemoList();
+        }
+
         // --- Navigation Logic ---
         function switchTab(targetId) {
             // Hide all sections
