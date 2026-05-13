@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정량 조사 이해하기</title>
+    <title>사용자 분석</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
@@ -89,7 +89,7 @@
     <!-- Sidebar Navigation -->
     <nav class="w-full md:w-64 bg-white border-r border-gray-200 shadow-sm z-10 flex-shrink-0 flex flex-col">
         <div class="p-6 border-b border-gray-200 bg-gray-50">
-            <h1 class="text-xl font-bold text-gray-900 tracking-tight">설문 설계 마스터</h1>
+            <h1 class="text-xl font-bold text-gray-900 tracking-tight">사용자 분석</h1>
             <p class="text-xs text-gray-600 mt-1">데이터 기반 의사결정 실무 가이드</p>
         </div>
 
@@ -109,6 +109,8 @@
                 <li><button onclick="switchTab('module2')" id="nav-module2" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">2. 데이터 분석</button></li>
                 <li><button onclick="switchTab('module2-1')" id="nav-module2-1" class="w-full text-left pl-10 pr-6 py-2 tab-inactive transition-colors text-sm font-medium">2-1. 데이터 정량화</button></li>
                 <li><button onclick="switchTab('module3')" id="nav-module3" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">3. 데이터 통합</button></li>
+                <li><button onclick="switchTab('module4')" id="nav-module4" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">4. 사용자 모델링</button></li>
+                <li><button onclick="switchTab('module5')" id="nav-module5" class="w-full text-left px-6 py-3 tab-inactive transition-colors text-sm font-medium">5. 페르소나 모델링</button></li>
             </ul>
         </div>
         
@@ -133,10 +135,10 @@
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 1: 가설 수립</h2>
                     <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"기획자의 착각을 깨는 첫걸음"</p>
                 </header>
-                
-                <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border border-gray-300">
-                    <p class="text-gray-800 leading-relaxed mb-4">
-                        이 섹션에서는 조사의 출발점이 되는 '가설'을 올바르게 세우는 방법을 배웁니다. 정량 조사는 기획자의 직관을 고집하는 것이 아니라, 시장의 실제 니즈를 냉정하게 검증하는 과정입니다. 데이터를 통해 참과 거짓을 명확히 판별할 수 있는 <strong>'강한 가설'</strong>을 작성하는 인터랙티브 예시를 확인해보세요.
+
+                <div class="mb-10 md:pr-12">
+                    <p class="text-[#111] font-medium text-[17px] leading-[1.7] break-keep">
+                        이 섹션에서는 조사의 출발점이 되는 '가설'을 올바르게 세우는 방법을 배웁니다. 정량 조사는 기획자의 직관을 고집하는 것이 아니라, 시장의 실제 니즈를 냉정하게 검증하는 과정입니다. 데이터를 통해 참과 거짓을 명확히 판별할 수 있는 <strong class="text-blue-700">'강한 가설'</strong>을 작성하는 인터랙티브 예시를 확인해보세요.
                     </p>
                 </div>
 
@@ -167,39 +169,39 @@
                     <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"정성 데이터를 정량 데이터로 변환하는 마법: 내용 분석법"</p>
                 </header>
 
-                <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border border-gray-300">
-                    <p class="text-gray-800 leading-relaxed mb-4">
-                        설문조사의 주관식 문항, 앱 스토어 리뷰, CS 문의 내역 등 수많은 텍스트 데이터(정성 데이터)를 어떻게 분석해야 할까요? 이 섹션에서는 '내용 분석법(Content Analysis)'을 통해 텍스트 속 숨겨진 인사이트를 비율과 빈도(정량 데이터)로 시각화하는 과정을 체험합니다.
+                <div class="mb-10 md:pr-12">
+                    <p class="text-[#111] font-medium text-[17px] leading-[1.7] break-keep">
+                        설문조사의 주관식 문항, 앱 스토어 리뷰, CS 문의 내역 등 수많은 텍스트 데이터(정성 데이터)를 어떻게 분석해야 할까요? 이 섹션에서는 <strong>'내용 분석법(Content Analysis)'</strong>을 통해 텍스트 속 숨겨진 인사이트를 비율과 빈도(정량 데이터)로 시각화하는 과정을 체험합니다.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border border-gray-300">
-                    <h3 class="text-lg font-bold text-gray-900 mb-5">내용 분석법 3단계</h3>
-                    <ol class="space-y-5">
+                <div class="mb-10">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">내용 분석법 3단계</h3>
+                    <ol class="space-y-6">
                         <li class="flex items-start">
                             <span class="bg-blue-100 text-blue-800 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm mr-3 shrink-0 border border-blue-200">1</span>
                             <div>
-                                <p class="font-bold text-gray-900 text-sm">데이터 숙독</p>
+                                <p class="font-bold text-gray-900 text-base">데이터 숙독</p>
                                 <p class="text-sm text-gray-600 mt-1">피드백 전체를 읽으며 핵심 맥락 파악</p>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="bg-blue-100 text-blue-800 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm mr-3 shrink-0 border border-blue-200">2</span>
                             <div>
-                                <p class="font-bold text-gray-900 text-sm">카테고리 수립</p>
+                                <p class="font-bold text-gray-900 text-base">카테고리 수립</p>
                                 <p class="text-sm text-gray-600 mt-1">기준 정의 (예: UI/UX 불편, 결제 오류)</p>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="bg-blue-100 text-blue-800 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm mr-3 shrink-0 border border-blue-200">3</span>
                             <div>
-                                <p class="font-bold text-gray-900 text-sm">분류 및 정량화</p>
+                                <p class="font-bold text-gray-900 text-base">분류 및 정량화</p>
                                 <p class="text-sm text-gray-600 mt-1">개별 피드백 할당 및 빈도 카운트</p>
                             </div>
                         </li>
                     </ol>
 
-                    <div class="mt-8 p-5 bg-blue-50 rounded border border-blue-200">
+                    <div class="mt-10 p-5 bg-blue-50 rounded border border-blue-200">
                         <h4 class="font-bold text-sm text-blue-900 flex items-center mb-2">AI 활용 실무 꿀팁</h4>
                         <p class="text-sm text-gray-700">수천 개의 리뷰를 직접 분류하기 힘들다면? 엑셀 데이터를 복사하여 ChatGPT 등 AI에게 분류와 비중 계산을 요청해보세요.</p>
                     </div>
@@ -213,8 +215,8 @@
                     <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"텍스트 데이터를 숫자로 변환하는 핵심 3단계"</p>
                 </header>
 
-                <div class="bg-white p-6 rounded-lg shadow-sm mb-12 border border-gray-300">
-                    <p class="text-gray-800 leading-relaxed">
+                <div class="mb-10 md:pr-12">
+                    <p class="text-[#111] font-medium text-[17px] leading-[1.7] break-keep">
                         모호한 정성 데이터를 통계와 비율로 확인하기 위해서는 체계적인 정량화 과정이 필수적입니다. 아래의 세부 프로세스를 따라 텍스트 데이터를 명확한 카테고리로 묶고 분류해 보세요.
                     </p>
                 </div>
@@ -320,8 +322,8 @@
                     <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"내용 분석 결과(정량)와 설문조사 결과(정성)를 하나로 연결하는 단계"</p>
                 </header>
 
-                <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border border-gray-300">
-                    <p class="text-gray-800 leading-relaxed">
+                <div class="mb-10 md:pr-12">
+                    <p class="text-[#111] font-medium text-[17px] leading-[1.7] break-keep">
                         이 단계는 앞서 도출한 두 가지 형태의 데이터(사용자의 구체적인 목소리와 이를 수치화한 정량 데이터)를 교차 분석하여 파편화된 정보를 강력한 하나의 인사이트로 결합하는 과정입니다. 
                     </p>
                 </div>
@@ -410,70 +412,418 @@
                 <h3 class="text-xl font-bold text-gray-900 mb-4">페르소나 연결점 도출 예시</h3>
                 <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
                     <table class="min-w-full w-full whitespace-nowrap md:whitespace-normal">
-                        <thead>
-                            <tr class="bg-white border-b border-gray-200">
-                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/6">주요 문제 영역 (Pain Points)</th>
-                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/4">페르소나 연결점 (1단계 도출)</th>
-                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/3">사용자 행동 및 태도 예측</th>
-                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/4">페르소나 행동 축 (Behavioral Axis)</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100">
-                            <!-- Row 1 -->
-                            <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">정보 인지 부하</td>
-                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">직관적 어휘 선호, 요약 정보 요구</td>
-                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">상세한 텍스트 설명을 읽기보다 핵심 위주로 화면을 스캐닝(Scanning)함</td>
-                                <td class="py-5 px-6 align-top">
-                                    <svg class="w-full max-w-[280px]" height="50" viewBox="0 0 320 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <!-- Axis Line -->
-                                        <line x1="10" y1="15" x2="310" y2="15" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
-                                        <line x1="160" y1="15" x2="310" y2="15" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
-                                        
-                                        <!-- Nodes -->
-                                        <circle cx="10" cy="15" r="5" fill="#9CA3AF"/>
-                                        <circle cx="310" cy="15" r="7" fill="#1D4ED8"/>
-                                        
-                                        <!-- Labels -->
-                                        <text x="10" y="38" fill="#6B7280" font-size="13" font-family="'Pretendard', sans-serif">상세 정보 탐독형</text>
-                                        <text x="310" y="38" fill="#111827" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif" text-anchor="end">핵심 요약 스캐닝형</text>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <!-- Row 2 -->
-                            <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">플로우 복잡성</td>
-                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">단계별 진행 선호, 오류 불안감</td>
-                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">한 화면에 여러 선택지가 주어지면 마비되며, 단일 태스크 집중 시 전환율 상승</td>
-                                <td class="py-5 px-6 align-top">
-                                    <svg class="w-full max-w-[280px]" height="50" viewBox="0 0 320 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <line x1="10" y1="15" x2="310" y2="15" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
-                                        <line x1="160" y1="15" x2="310" y2="15" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
-                                        <circle cx="10" cy="15" r="5" fill="#9CA3AF"/>
-                                        <circle cx="310" cy="15" r="7" fill="#1D4ED8"/>
-                                        <text x="10" y="38" fill="#6B7280" font-size="13" font-family="'Pretendard', sans-serif">다중 경로 자율 탐색형</text>
-                                        <text x="310" y="38" fill="#111827" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif" text-anchor="end">단일 경로 유도형 (Guided)</text>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <!-- Row 3 -->
-                            <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">시스템 신뢰도</td>
-                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">시스템 불신, 인적 해결책 선호</td>
-                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">서비스 이용 중 막히는 구간에서 스스로 해결책을 찾기보다 즉시 고객센터 아이콘을 찾음</td>
-                                <td class="py-5 px-6 align-top">
-                                    <svg class="w-full max-w-[280px]" height="50" viewBox="0 0 320 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <line x1="10" y1="15" x2="310" y2="15" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
-                                        <line x1="160" y1="15" x2="310" y2="15" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
-                                        <circle cx="10" cy="15" r="5" fill="#9CA3AF"/>
-                                        <circle cx="310" cy="15" r="7" fill="#1D4ED8"/>
-                                        <text x="10" y="38" fill="#6B7280" font-size="13" font-family="'Pretendard', sans-serif">시스템 기반 자가 해결형</text>
-                                        <text x="310" y="38" fill="#111827" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif" text-anchor="end">인적 자원 의존형</text>
-                                    </svg>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <!-- ... existing code for module 3 table ... -->
                     </table>
+                </div>
+            </section>
+
+            <!-- Module 4: 사용자 모델링 -->
+            <section id="module4" class="content-section hidden">
+                <header class="mb-8 border-b border-gray-300 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 4: 사용자 모델링</h2>
+                    <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"사용자 경험(UX)을 입체적으로 이해하고 요구사항을 구체화하는 방법"</p>
+                </header>
+
+                <!-- 1. 서비스 환경 4요소 -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1. 서비스 환경 4요소</h3>
+                    <div class="mb-8 md:pr-12">
+                        <p class="text-[#111] font-medium text-[17px] leading-[1.7] break-keep">
+                            사용자가 서비스를 이용하는 환경은 단순히 모바일 앱이나 웹 화면(UI)에만 국한되지 않습니다. 전체적인 사용자 경험(UX)을 이해하기 위해서는 다음 4가지 관점에서 환경 요소를 입체적으로 분석해야 합니다.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-blue-800 mb-2">물리적 환경 (Physical)</h4>
+                            <p class="text-sm text-gray-700 mb-2">사용자가 서비스를 이용하는 공간, 장비, 시설, 주변 소음, 조명 등</p>
+                            <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded">(예: 혼잡한 출근길 지하철, 야외 직사광선 아래, 조용한 독서실)</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-blue-800 mb-2">디지털 환경 (Digital)</h4>
+                            <p class="text-sm text-gray-700 mb-2">사용자가 조작하는 기기와 시스템 UI/UX</p>
+                            <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded">(예: 스마트폰 기종, 화면 크기, 앱의 로딩 속도, 버튼 위치)</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-blue-800 mb-2">사회적 환경 (Social)</h4>
+                            <p class="text-sm text-gray-700 mb-2">다른 사람과의 상호작용, 타인의 시선, 서비스 직원의 응대 태도 등</p>
+                            <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded">(예: 친구와 함께 있는 상황, 안내원의 불친절한 태도, 주변의 시선이 신경 쓰이는 상황)</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-blue-800 mb-2">시간적 환경 (Temporal)</h4>
+                            <p class="text-sm text-gray-700 mb-2">서비스를 이용하는 시간대, 대기 시간, 작업 처리 속도, 사용자의 시간적 압박감 등</p>
+                            <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded">(예: 점심시간 10분 전의 촉박함, 무한 로딩 대기)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-5">
+                        <h4 class="font-bold text-blue-900 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                            실습 순서
+                        </h4>
+                        <ol class="list-decimal list-inside space-y-2 text-sm text-gray-800 font-medium">
+                            <li>서비스 기획 주제 중 선정한 핵심 타깃이 가장 빈번하게 사용할 <span class="text-blue-700">대표 상황 설정</span></li>
+                            <li>설정한 상황을 <span class="text-blue-700">4가지 환경 요소로 쪼개서 작성</span></li>
+                            <li><strong>페인 포인트 발굴 :</strong> 작성 환경 요소 중 사용자를 가장 불편하게 하는 요소는 무엇인지 체크</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 2. 사용자 니즈와 요구사항의 차이점 -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">2. 사용자 니즈(Needs)와 요구사항(Requirements)의 차이점</h3>
+                    <div class="mb-8 md:pr-12">
+                        <p class="text-[#111] font-medium text-[17px] leading-[1.7] break-keep">
+                            서비스 기획 단계에서 사용자의 불만을 해결책으로 바꾸기 위해 반드시 구분해야 하는 두 가지 개념입니다.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-6 mb-6">
+                        <!-- Needs -->
+                        <div class="flex-1 bg-red-50 p-6 rounded-lg border border-red-200 relative">
+                            <span class="absolute top-4 right-4 text-xs font-bold text-red-600 bg-red-100 px-2 py-1 rounded">Problem</span>
+                            <h4 class="text-lg font-bold text-red-800 mb-3">사용자 니즈 (Needs)</h4>
+                            <ul class="space-y-3 text-sm text-gray-800">
+                                <li><strong class="text-red-700">정의:</strong> 사용자가 서비스 이용 중 느끼는 내면적 욕구, 기대, 불편함.</li>
+                                <li><strong class="text-red-700">주체 및 형태:</strong> 사용자 관점의 주관적이고 감정적인 언어로 표현됩니다.</li>
+                                <li class="bg-white p-3 rounded border border-red-100 mt-2">
+                                    <span class="text-xs text-gray-500 block mb-1">예시</span>
+                                    "결제할 때 화면이 복잡해서 너무 짜증나요. 한 번에 끝내고 싶어요."
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Arrow -->
+                        <div class="hidden md:flex items-center justify-center text-gray-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+
+                        <!-- Requirements -->
+                        <div class="flex-1 bg-blue-50 p-6 rounded-lg border border-blue-200 relative">
+                            <span class="absolute top-4 right-4 text-xs font-bold text-blue-700 bg-blue-100 px-2 py-1 rounded">Solution</span>
+                            <h4 class="text-lg font-bold text-blue-800 mb-3">요구사항 (Requirements)</h4>
+                            <ul class="space-y-3 text-sm text-gray-800">
+                                <li><strong class="text-blue-700">정의:</strong> 사용자의 니즈를 해결하기 위해 실제 디자인/개발 시 반영해야 할 구체적인 실행 조건.</li>
+                                <li><strong class="text-blue-700">주체 및 형태:</strong> 기획자/개발자 관점의 객관적이고 실행 가능한 문장으로 표현됩니다.</li>
+                                <li class="bg-white p-3 rounded border border-blue-100 mt-2">
+                                    <span class="text-xs text-gray-500 block mb-1">예시</span>
+                                    "결제 화면의 입력 폼을 3단계 이내로 축소하고, 간편 결제(생체인증) 기능을 제공한다."
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-5">
+                        <h4 class="font-bold text-blue-900 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                            실습 순서
+                        </h4>
+                        <ol class="list-decimal list-inside space-y-2 text-sm text-gray-800 font-medium">
+                            <li><strong>니즈 작성하기 :</strong> 팀별 주제와 관련해 고객 불만 세가지를 <span class="text-red-600">사용자의 말투로 작성</span></li>
+                            <li><strong>요구사항 전환 :</strong> 작성된 니즈 옆칸에 <span class="text-blue-700">기획자의 언어로 변환</span>하여 작성</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 3. SMART 작성 원칙 -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">3. SMART 작성 원칙 <span class="text-lg font-normal text-gray-500 ml-2">(요구사항 명세화 기준)</span></h3>
+                    <div class="mb-8 md:pr-12">
+                        <p class="text-[#111] font-medium text-[17px] leading-[1.7] break-keep mb-8">
+                            요구사항을 도출했다면, 이 요구사항이 실제로 프로젝트에 반영할 수 있는 '좋은 요구사항'인지 평가해야 합니다. 이때 사용하는 기준이 SMART 원칙입니다.
+                        </p>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <div class="bg-[#EBF2FF] text-[#2563EB] font-bold w-10 h-10 rounded-lg flex items-center justify-center mr-4 shrink-0 text-lg">S</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-base">Specific (구체성)</h4>
+                                    <p class="text-sm text-gray-600 mt-1">모호한 표현("쉽게", "빠르게", "예쁘게")은 배제하고, 누가 무엇을 어떻게 해야 하는지 명확히 작성했는가?</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-[#EBF2FF] text-[#2563EB] font-bold w-10 h-10 rounded-lg flex items-center justify-center mr-4 shrink-0 text-lg">M</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-base">Measurable (측정 가능성)</h4>
+                                    <p class="text-sm text-gray-600 mt-1">결과가 달성되었는지 판단할 수 있는 수치나 기준이 있는가? (예: "3초 이내", "2번의 클릭으로")</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-[#EBF2FF] text-[#2563EB] font-bold w-10 h-10 rounded-lg flex items-center justify-center mr-4 shrink-0 text-lg">A</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-base">Achievable (달성 가능성)</h4>
+                                    <p class="text-sm text-gray-600 mt-1">현재 팀의 기술력, 예산, 상황을 고려할 때 현실적으로 구현 가능한가?</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-[#EBF2FF] text-[#2563EB] font-bold w-10 h-10 rounded-lg flex items-center justify-center mr-4 shrink-0 text-lg">R</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-base">Relevant (관련성)</h4>
+                                    <p class="text-sm text-gray-600 mt-1">이 요구사항이 사용자의 진짜 니즈(불편함)를 해결하는 데 직접적으로 기여하는가?</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-[#EBF2FF] text-[#2563EB] font-bold w-10 h-10 rounded-lg flex items-center justify-center mr-4 shrink-0 text-lg">T</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-base">Time-bound (시간 조건)</h4>
+                                    <p class="text-sm text-gray-600 mt-1">정해진 프로젝트 기간 내에 설계 및 개발이 가능한 규모인가?</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-5">
+                        <h4 class="font-bold text-blue-900 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                            실습 순서
+                        </h4>
+                        <ol class="list-decimal list-inside space-y-4 text-sm text-gray-800 font-medium">
+                            <li>
+                                <strong>SMART 셀프 점검:</strong> 앞선 실습에서 본인이 전환한 '요구사항 문장' 중 가장 중요한 1개를 선택합니다.
+                            </li>
+                            <li>
+                                <strong>기준 대입 (체크리스트):</strong> S, M, A, R, T 5가지 기준에 각각 부합하는지 O/X로 체크합니다.
+                                <div class="bg-white p-3 rounded border border-gray-200 mt-2 text-gray-600 font-normal">
+                                    <span class="text-xs font-bold text-gray-500 block mb-1">예시 진단</span>
+                                    "회원가입을 빠르게 만든다." <span class="text-gray-400 mx-2">➔</span> 
+                                    <span class="inline-block bg-red-50 text-red-600 px-1.5 rounded mr-1">S: X</span>
+                                    <span class="inline-block bg-red-50 text-red-600 px-1.5 rounded mr-1">M: X</span>
+                                    <span class="inline-block bg-green-50 text-green-600 px-1.5 rounded mr-1">A: O</span>
+                                    <span class="inline-block bg-green-50 text-green-600 px-1.5 rounded mr-1">R: O</span>
+                                    <span class="inline-block bg-green-50 text-green-600 px-1.5 rounded mr-1">T: O</span>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>문장 고도화 (Redrafting):</strong> X가 나온 항목(특히 Specific, Measurable)을 보완하여 문장을 최종 수정합니다.
+                                <div class="bg-white p-3 rounded border border-blue-200 mt-2 text-gray-800 font-normal border-l-4 border-l-blue-500">
+                                    <span class="text-xs font-bold text-blue-600 block mb-1">수정 후</span>
+                                    "신규 사용자의 회원가입 절차를 소셜 로그인 연동을 통해 2단계(약관동의-완료)로 단축하여, 가입 소요 시간을 1분 이내로 구성한다."
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Module 5: 페르소나 모델링 -->
+            <section id="module5" class="content-section hidden">
+                <header class="mb-8 border-b border-gray-300 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">모듈 5: 페르소나 모델링</h2>
+                    <p class="text-lg text-gray-600 border-l-4 border-blue-700 pl-4">"데이터를 살아 숨 쉬는 진짜 사람으로 구체화하는 과정"</p>
+                </header>
+
+                <!-- 교육 목표 및 실습 전제 -->
+                <div class="bg-gray-100 rounded-lg p-6 border border-gray-300 mb-10">
+                    <h3 class="font-bold text-gray-900 text-lg mb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        교육 목표 및 실습 전제
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-800 leading-relaxed">
+                        <li><strong class="text-blue-800">목표:</strong> 앞서 분석한 '서비스 환경'과 '핵심 니즈'를 바탕으로, 기획 주제의 타깃 고객(페르소나)을 4분면 기법으로 도출하고 내러티브 기법으로 구체화합니다.</li>
+                        <li><strong class="text-blue-800">전제:</strong> 본 실습은 수강생 각자가 현재 진행하고 있는 기획 주제를 바탕으로 진행되며, 정의한 요구사항(SMART)을 실제로 겪는 당사자를 설정하는 과정입니다.</li>
+                    </ul>
+                </div>
+
+                <!-- 1. 페르소나 1/2순위 개념 및 사용자 4분면 분류법 -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1. 페르소나 우선순위 및 4분면 분류법</h3>
+                    <div class="mb-6 md:pr-12">
+                        <p class="text-[#111] font-medium text-[17px] leading-[1.7] break-keep mb-4">
+                            앞서 우리는 서비스 환경(물리/디지털/사회/시간)에 따라 사용자의 니즈가 어떻게 달라지는지 확인했습니다. 하지만 <strong class="text-blue-700">모든 사용자를 완벽히 만족시키는 단 하나의 서비스는 존재할 수 없습니다.</strong> 따라서 한정된 자원과 시간 속에서 누구의 문제를 가장 먼저 해결할 것인지 우선순위를 정해야 합니다.
+                        </p>
+                        
+                        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg mt-6">
+                            <h4 class="font-bold text-blue-900 mb-2">사용자 4분면 분류법 (User Quadrant)</h4>
+                            <p class="text-sm text-gray-800 leading-relaxed">
+                                사용자의 서비스 적합도나 성향을 두 가지 축(X축, Y축)으로 나누어 4개의 영역으로 분류하는 방법입니다. 제품을 얼마나 잘 사용할 수 있는지, 혹은 어떤 환경에 놓여 있는지에 따라 사용자 군을 시각적으로 파악할 수 있어, <strong>가장 유력한 핵심 고객(1순위)</strong>과 접근하기 어려운 고객을 명확히 구분할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 실습 및 4분면 시각화 -->
+                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg p-6 mb-8">
+                        <h4 class="font-bold text-gray-900 text-lg mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                            실습: 4분면(Quadrant) 매핑
+                        </h4>
+                        <p class="text-sm text-gray-700 mb-6">내 기획 주제의 사용자 그룹을 쪼개고, 가장 시급한 1순위 타깃을 선정하기 위해 아래 예시와 같이 4분면을 그립니다.</p>
+
+                        <!-- Quadrant Map Example A -->
+                        <div class="mb-10">
+                            <div class="mb-4">
+                                <span class="bg-gray-200 text-gray-800 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">실습 예시 A</span>
+                                <h5 class="text-base font-bold text-gray-900 mt-2">키오스크/배달 앱 UI 개선 프로젝트</h5>
+                                <p class="text-sm text-gray-600 mt-1"><strong>이전 도출 내용:</strong> Pain Point가 '메뉴가 너무 많아 탐색 시간이 오래 걸리고 이탈함'</p>
+                            </div>
+                            
+                            <!-- Quadrant Grid UI A -->
+                            <div class="w-full max-w-2xl mx-auto relative mt-8 mb-4">
+                                <!-- Axes Labels -->
+                                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-8 text-xs font-bold text-gray-600 text-center w-full">시간적 여유 많음 (탐색 즐김)</div>
+                                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8 text-xs font-bold text-gray-600 text-center w-full">시간적 여유 없음 (빠른 목적 달성)</div>
+                                <div class="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 pr-4 text-xs font-bold text-gray-600 text-center w-24">디지털<br>숙련도<br>낮음</div>
+                                <div class="absolute right-0 top-1/2 translate-x-full -translate-y-1/2 pl-4 text-xs font-bold text-gray-600 text-center w-24">디지털<br>숙련도<br>높음</div>
+
+                                <!-- Grid lines -->
+                                <div class="grid grid-cols-2 grid-rows-2 border-2 border-gray-300 bg-white">
+                                    <!-- Top Left -->
+                                    <div class="border-b border-r border-gray-300 p-4 h-40 flex flex-col items-center justify-center">
+                                        <div class="text-xs text-gray-500 font-bold mb-1">여유 O / 숙련도 낮음</div>
+                                        <div class="bg-gray-50 border border-gray-200 px-3 py-2 rounded text-center shadow-sm">
+                                            <div class="font-bold text-gray-800 text-sm">5060 장년층</div>
+                                            <div class="text-xs text-gray-500">(천천히 메뉴 구경)</div>
+                                        </div>
+                                    </div>
+                                    <!-- Top Right -->
+                                    <div class="border-b border-gray-300 p-4 h-40 flex flex-col items-center justify-center">
+                                        <div class="text-xs text-gray-500 font-bold mb-1">여유 O / 숙련도 높음</div>
+                                        <div class="bg-gray-50 border border-gray-200 px-3 py-2 rounded text-center shadow-sm">
+                                            <div class="font-bold text-gray-800 text-sm">20대 미식가</div>
+                                            <div class="text-xs text-gray-500">(다양한 옵션 탐색)</div>
+                                        </div>
+                                    </div>
+                                    <!-- Bottom Left (Target) -->
+                                    <div class="border-r border-gray-300 bg-blue-50 p-4 h-40 flex flex-col items-center justify-center relative">
+                                        <div class="absolute top-3 bg-blue-400 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">★ 1순위 타깃 (Primary)</div>
+                                        <div class="text-xs text-blue-800 font-bold mb-1 mt-3">시간 부족 / 숙련도 낮음</div>
+                                        <div class="bg-white border-2 border-blue-400 px-3 py-2 rounded text-center shadow-sm z-10 w-full max-w-[200px]">
+                                            <div class="font-bold text-gray-900 text-sm">바쁜 직장인 / 어르신</div>
+                                            <div class="text-[11px] text-blue-700 mt-1 leading-tight">"복잡한 거 싫고, 늘 먹던 거 빨리 결제할래"</div>
+                                        </div>
+                                    </div>
+                                    <!-- Bottom Right -->
+                                    <div class="p-4 h-40 flex flex-col items-center justify-center relative">
+                                        <div class="absolute top-3 bg-gray-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">2순위 타깃</div>
+                                        <div class="text-xs text-gray-500 font-bold mb-1 mt-3">시간 부족 / 숙련도 높음</div>
+                                        <div class="bg-white border border-gray-400 px-3 py-2 rounded text-center shadow-sm w-full max-w-[180px]">
+                                            <div class="font-bold text-gray-800 text-sm">2030 대학생/직장인</div>
+                                            <div class="text-[11px] text-gray-500 mt-1">(검색/필터 기능 활용)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quadrant Map Example B -->
+                        <div class="mt-16">
+                            <div class="mb-4">
+                                <span class="bg-gray-200 text-gray-800 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">실습 예시 B</span>
+                                <h5 class="text-base font-bold text-gray-900 mt-2">사내 업무 협업툴(그룹웨어) 개선</h5>
+                                <p class="text-sm text-gray-600 mt-1"><strong>이전 도출 내용:</strong> Pain Point가 '기능이 너무 많고 알림이 과도하여 업무 집중이 안 됨'</p>
+                            </div>
+                            
+                            <!-- Quadrant Grid UI B -->
+                            <div class="w-full max-w-2xl mx-auto relative mt-8 mb-4">
+                                <!-- Axes Labels -->
+                                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-8 text-xs font-bold text-gray-600 text-center w-full">다중 작업 선호 (멀티태스킹)</div>
+                                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8 text-xs font-bold text-gray-600 text-center w-full">단일 업무 집중 선호 (딥워크)</div>
+                                <div class="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 pr-4 text-xs font-bold text-gray-600 text-center w-24">정보<br>수신<br>수동적</div>
+                                <div class="absolute right-0 top-1/2 translate-x-full -translate-y-1/2 pl-4 text-xs font-bold text-gray-600 text-center w-24">정보<br>공유<br>적극적</div>
+
+                                <!-- Grid lines -->
+                                <div class="grid grid-cols-2 grid-rows-2 border-2 border-gray-300 bg-white">
+                                    <!-- Top Left -->
+                                    <div class="border-b border-r border-gray-300 p-4 h-40 flex flex-col items-center justify-center">
+                                        <div class="text-xs text-gray-500 font-bold mb-1">멀티태스킹 / 수동적</div>
+                                        <div class="bg-gray-50 border border-gray-200 px-3 py-2 rounded text-center shadow-sm">
+                                            <div class="font-bold text-gray-800 text-sm">지원/운영 부서</div>
+                                        </div>
+                                    </div>
+                                    <!-- Top Right -->
+                                    <div class="border-b border-gray-300 p-4 h-40 flex flex-col items-center justify-center relative">
+                                        <div class="absolute top-3 bg-gray-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">2순위 타깃</div>
+                                        <div class="text-xs text-gray-500 font-bold mb-1 mt-3">멀티태스킹 / 적극 공유</div>
+                                        <div class="bg-white border border-gray-400 px-3 py-2 rounded text-center shadow-sm w-full max-w-[190px]">
+                                            <div class="font-bold text-gray-800 text-sm">프로젝트 매니저(PM)</div>
+                                            <div class="text-[11px] text-gray-500 mt-1">(알림 많아도 다 체크해야 함)</div>
+                                        </div>
+                                    </div>
+                                    <!-- Bottom Left -->
+                                    <div class="border-r border-gray-300 p-4 h-40 flex flex-col items-center justify-center">
+                                        <div class="text-xs text-gray-500 font-bold mb-1">단일업무 / 수동적</div>
+                                        <div class="bg-gray-50 border border-gray-200 px-3 py-2 rounded text-center shadow-sm">
+                                            <div class="font-bold text-gray-800 text-sm">일반 사원/신입</div>
+                                        </div>
+                                    </div>
+                                    <!-- Bottom Right (Target) -->
+                                    <div class="bg-blue-50 p-4 h-40 flex flex-col items-center justify-center relative">
+                                        <div class="absolute top-3 bg-blue-400 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">★ 1순위 타깃 (Primary)</div>
+                                        <div class="text-xs text-blue-800 font-bold mb-1 mt-3">단일업무 / 적극 공유</div>
+                                        <div class="bg-white border-2 border-blue-400 px-3 py-2 rounded text-center shadow-sm z-10 w-full max-w-[200px]">
+                                            <div class="font-bold text-gray-900 text-sm">개발자 / 전문 기획자</div>
+                                            <div class="text-[11px] text-blue-700 mt-1 leading-tight">"코딩/기획할 땐 알림 좀 꺼주세요"</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. 내러티브 기법 및 사진 사용 유의점 -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">2. 내러티브 기법 (소설처럼 작성)</h3>
+                    <div class="mb-6 md:pr-12">
+                        <p class="text-[#111] font-medium text-[17px] leading-[1.7] break-keep mb-4">
+                            타깃 그룹을 정했다면, 이들을 무미건조한 데이터 조각이 아닌 <strong class="text-blue-700">'살아 숨 쉬는 사람'</strong>으로 묘사해야 합니다. 이를 통해 기획자, 디자이너, 개발자 등 프로젝트에 참여하는 모든 팀원이 완전히 동일한 사용자의 모습을 머릿속에 그릴 수 있게 됩니다.
+                        </p>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg mt-6">
+                            <h4 class="font-bold text-blue-900 mb-2">내러티브(Narrative) 기법이란?</h4>
+                            <p class="text-sm text-gray-800 leading-relaxed mb-3">
+                                인물의 성격, 성향, 일과, 서비스 이용 패턴을 마치 한 편의 짧은 소설이나 일기처럼 서술하는 방법입니다.
+                            </p>
+                            <div class="bg-white p-3 rounded border border-blue-200">
+                                <div class="flex items-start mb-2">
+                                    <span class="text-red-500 font-bold mr-2">(X)</span>
+                                    <span class="text-gray-600 text-sm">"20대 여성, 직장인"</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-blue-600 font-bold mr-2">(O)</span>
+                                    <span class="text-gray-900 font-medium text-sm">"매일 아침 9시, 지옥철에서 한 손으로 간신히 스마트폰을 쥐고 뉴스를 보는 3년 차 마케터"</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 실습: 내러티브 작성 -->
+                    <div class="bg-white border border-gray-200 shadow-sm rounded-lg p-6 mb-8">
+                        <h4 class="font-bold text-gray-900 text-lg mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                            실습: 내러티브 스토리 작성 및 검증
+                        </h4>
+                        
+                        <ol class="space-y-6">
+                            <li class="relative pl-8">
+                                <span class="absolute left-0 top-0 bg-gray-200 text-gray-800 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs">1</span>
+                                <h5 class="font-bold text-gray-900 mb-1">프로필 기본 세팅</h5>
+                                <p class="text-sm text-gray-600">1순위 페르소나의 이름, 나이, 직업을 부여하고 그들이 처한 상황이 잘 드러나는 사진을 부착합니다.</p>
+                            </li>
+                            <li class="relative pl-8">
+                                <span class="absolute left-0 top-0 bg-gray-200 text-gray-800 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs">2</span>
+                                <h5 class="font-bold text-gray-900 mb-1">내러티브 스토리 작성 (3~4문장)</h5>
+                                <p class="text-sm text-gray-600 mb-3">1교시에서 정의했던 서비스 환경(물리/사회 등) 요소를 반드시 한 가지 이상 문장 속에 포함시켜 소설처럼 묘사합니다.</p>
+                                <div class="bg-purple-50 border border-purple-200 rounded p-4">
+                                    <h6 class="text-xs font-bold text-purple-800 uppercase mb-2">★ 니즈와 페인 포인트 연결 공식</h6>
+                                    <p class="text-sm text-gray-800 font-medium leading-relaxed">
+                                        "이 페르소나는 평소 <strong class="text-purple-700">[ 1교시의 환경 ]</strong> 속에서 우리 서비스를 이용하려다 보니, <strong class="text-purple-700">[ 1교시의 Pain Point ]</strong>를 겪어 답답함을 느낀다.<br>
+                                        따라서 이 페르소나에게는 <strong class="text-purple-700">[ 1교시의 요구사항 ]</strong>이 반영된 기능이 반드시 필요하다."
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="relative pl-8">
+                                <span class="absolute left-0 top-0 bg-gray-200 text-gray-800 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs">3</span>
+                                <h5 class="font-bold text-gray-900 mb-1">조별 롤플레잉 및 검증 (페르소나 인터뷰)</h5>
+                                <p class="text-sm text-gray-600 mb-3">작성된 페르소나가 실제 사람처럼 구체적인지 확인하기 위해 빙의하여 인터뷰를 진행합니다. (1인 조의 경우 스스로 묻고 답하기)</p>
+                                <ul class="space-y-2 text-sm text-gray-800 bg-gray-50 p-4 rounded border border-gray-200">
+                                    <li><strong class="text-blue-700">Q1. (환경 확인)</strong> "지금 어디서, 어떤 상황에서 우리 서비스를 쓰려고 하시나요?"</li>
+                                    <li><strong class="text-blue-700">Q2. (Pain Point)</strong> "방금 사용하시면서 가장 짜증 났거나 불편했던 순간은 정확히 언제인가요?"</li>
+                                    <li><strong class="text-blue-700">Q3. (니즈 확인)</strong> "저희가 당장 어떤 기능을 만들어 드리면 그 불편함이 해결될까요?"</li>
+                                </ul>
+                                <p class="text-xs text-red-600 mt-2 font-medium">※ 회고: 대답이 기계적이거나 "그냥 편했으면 좋겠어요" 수준이라면 설정이 얕은 것입니다. 다시 내러티브를 구체화하세요.</p>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </section>
 
