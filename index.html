@@ -412,7 +412,69 @@
                 <h3 class="text-xl font-bold text-gray-900 mb-4">페르소나 연결점 도출 예시</h3>
                 <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
                     <table class="min-w-full w-full whitespace-nowrap md:whitespace-normal">
-                        <!-- ... existing code for module 3 table ... -->
+                        <thead>
+                            <tr class="bg-white border-b border-gray-200">
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/6">주요 문제 영역 (Pain Points)</th>
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/4">페르소나 연결점 (1단계 도출)</th>
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/3">사용자 행동 및 태도 예측</th>
+                                <th class="py-4 px-6 text-left text-sm font-bold text-gray-900 w-1/4">페르소나 행동 축 (Behavioral Axis)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <!-- Row 1 -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">정보 인지 부하</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">직관적 어휘 선호, 요약 정보 요구</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">상세한 텍스트 설명을 읽기보다 핵심 위주로 화면을 스캐닝(Scanning)함</td>
+                                <td class="py-5 px-6 align-top">
+                                    <svg class="w-full max-w-[280px]" height="50" viewBox="0 0 320 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Axis Line -->
+                                        <line x1="10" y1="15" x2="310" y2="15" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
+                                        <line x1="160" y1="15" x2="310" y2="15" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
+                                        
+                                        <!-- Nodes -->
+                                        <circle cx="10" cy="15" r="5" fill="#9CA3AF"/>
+                                        <circle cx="310" cy="15" r="7" fill="#1D4ED8"/>
+                                        
+                                        <!-- Labels -->
+                                        <text x="10" y="38" fill="#6B7280" font-size="13" font-family="'Pretendard', sans-serif">상세 정보 탐독형</text>
+                                        <text x="310" y="38" fill="#111827" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif" text-anchor="end">핵심 요약 스캐닝형</text>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">플로우 복잡성</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">단계별 진행 선호, 오류 불안감</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">한 화면에 여러 선택지가 주어지면 마비되며, 단일 태스크 집중 시 전환율 상승</td>
+                                <td class="py-5 px-6 align-top">
+                                    <svg class="w-full max-w-[280px]" height="50" viewBox="0 0 320 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="10" y1="15" x2="310" y2="15" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
+                                        <line x1="160" y1="15" x2="310" y2="15" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
+                                        <circle cx="10" cy="15" r="5" fill="#9CA3AF"/>
+                                        <circle cx="310" cy="15" r="7" fill="#1D4ED8"/>
+                                        <text x="10" y="38" fill="#6B7280" font-size="13" font-family="'Pretendard', sans-serif">다중 경로 자율 탐색형</text>
+                                        <text x="310" y="38" fill="#111827" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif" text-anchor="end">단일 경로 유도형 (Guided)</text>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-5 px-6 text-sm text-gray-600 font-medium align-top">시스템 신뢰도</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">시스템 불신, 인적 해결책 선호</td>
+                                <td class="py-5 px-6 text-sm text-gray-800 leading-relaxed align-top">서비스 이용 중 막히는 구간에서 스스로 해결책을 찾기보다 즉시 고객센터 아이콘을 찾음</td>
+                                <td class="py-5 px-6 align-top">
+                                    <svg class="w-full max-w-[280px]" height="50" viewBox="0 0 320 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="10" y1="15" x2="310" y2="15" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
+                                        <line x1="160" y1="15" x2="310" y2="15" stroke="#93C5FD" stroke-width="4" stroke-linecap="round"/>
+                                        <circle cx="10" cy="15" r="5" fill="#9CA3AF"/>
+                                        <circle cx="310" cy="15" r="7" fill="#1D4ED8"/>
+                                        <text x="10" y="38" fill="#6B7280" font-size="13" font-family="'Pretendard', sans-serif">시스템 기반 자가 해결형</text>
+                                        <text x="310" y="38" fill="#111827" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif" text-anchor="end">인적 자원 의존형</text>
+                                    </svg>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </section>
